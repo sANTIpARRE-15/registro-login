@@ -1,1 +1,15 @@
 # registro-login.php
+README - SISTEMA DE REGISTRO E INICIO DE SESIÓN DESCRIPCIÓN Este proyecto consiste en un sistema de registro e inicio de sesión de usuarios. Los formularios permiten a los usuarios registrarse con su información personal y acceder a la aplicación utilizando sus credenciales. El sistema está construido utilizando tecnologías web modernas, incluyendo PHP, MySQL, JavaScript, HTML y CSS.
+
+CARACTERÍSTICAS
+
+FORMULARIO DE REGISTRO El FORMULARIO DE REGISTRO permite a los nuevos usuarios crear una cuenta. Incluye los siguientes campos:
+NOMBRE: Campo de texto para ingresar el NOMBRE del usuario. APELLIDO: Campo de texto para ingresar el APELLIDO del usuario. USUARIO: Campo de texto donde el usuario elige un NOMBRE ÚNICO, fácil de recordar y sin espacios. CONTRASEÑA: Campo de texto donde el usuario ingresa su CONTRASEÑA, que se almacena de manera segura en la BASE DE DATOS.
+
+VALIDACIONES: Todos los campos son obligatorios. Si alguno está vacío, se muestra un mensaje de advertencia. La CONTRASEÑA se encripta utilizando el algoritmo SHA-512 antes de ser almacenada en la BASE DE DATOS. 2. FORMULARIO DE INICIO DE SESIÓN (LOGIN) El FORMULARIO DE INICIO DE SESIÓN permite a los usuarios registrados acceder a su cuenta. Incluye los siguientes campos:
+
+USUARIO: Campo de texto para ingresar el NOMBRE DE USUARIO registrado. CONTRASEÑA: Campo de texto para ingresar la CONTRASEÑA correspondiente al usuario. VALIDACIONES:
+
+Se verifica que ambos campos estén completos. Si falta información, se muestra un mensaje de advertencia. Se valida que el USUARIO y la CONTRASEÑA coincidan con los registros en la BASE DE DATOS. TECNOLOGÍAS UTILIZADAS HTML: Estructura básica del FORMULARIO y la PÁGINA WEB. CSS: Estilos y diseño del FORMULARIO utilizando Bootstrap para un diseño responsivo y atractivo. JAVASCRIPT: Manejo del historial del NAVEGADOR para evitar el reenvío del FORMULARIO al refrescar la PÁGINA. PHP: Lógica del SERVIDOR para procesar los FORMULARIOS, validar datos y realizar consultas a la BASE DE DATOS. MYSQL: BASE DE DATOS para almacenar la información de los usuarios, incluyendo sus NOMBRES, APELLIDOS, NOMBRES DE USUARIO y CONTRASEÑAS ENCRIPTADAS. ESTRUCTURA DE LA BASE DE DATOS BASE DE DATOS: login TABLA: usuarios
+
+CAMPO TIPO DESCRIPCIÓN id INT IDENTIFICADOR ÚNICO (AUTO_INCREMENT, PRIMARY KEY) nombre VARCHAR(100) ALMACENA EL NOMBRE DEL USUARIO apellido VARCHAR(100) ALMACENA EL APELLIDO DEL USUARIO usuario VARCHAR(100) ALMACENA EL NOMBRE DE USUARIO (UNIQUE) contraseña VARCHAR(255) ALMACENA LA CONTRASEÑA ENCRIPTADA EJEMPLO DE CREACIÓN DE TABLA EN MYSQL sql Copiar código CREATE TABLE usuarios ( id INT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(100) NOT NULL, apellido VARCHAR(100) NOT NULL, usuario VARCHAR(100) NOT NULL UNIQUE, contraseña VARCHAR(255) NOT NULL ); CONCLUSIÓN Este sistema de REGISTRO e INICIO DE SESIÓN proporciona una forma sencilla y segura para que los usuarios se registren y accedan a la aplicación. Se pueden agregar más características en el futuro, como la recuperación de CONTRASEÑAS y la verificación por CORREO ELECTRÓNICO.
